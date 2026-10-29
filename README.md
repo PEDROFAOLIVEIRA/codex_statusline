@@ -1,16 +1,27 @@
 # Codex Statusline
 
-Uma configuração enxuta para a linha de status nativa do Codex CLI. Ela reúne modelo e raciocínio, projeto, branch Git, uso do contexto, tamanho da janela, limite semanal e modo de aprovação.
+[🇧🇷 Português](README.md) · [🇺🇸 English](README.en.md) · [🇪🇸 Español](README.es.md) · [🇯🇵 日本語](README.ja.md) · [🇨🇳 中文](README.zh.md)
+
+Uma configuração compacta para a linha de status nativa do **Codex CLI**. Ela reúne modelo, projeto, branch Git, uso de contexto, limite de uso e modo de aprovação em uma linha.
 
 ![Prévia da statusline nativa do Codex](assets/statusline-preview.svg)
 
-> A imagem é uma prévia ilustrativa da linha nativa. O Codex renderiza esses indicadores como texto; este projeto não desenha barras gráficas de progresso.
+> A imagem é uma prévia ilustrativa. O Codex mostra indicadores nativos como texto; este projeto não desenha barras gráficas de progresso.
 
-## Configuração
+## Exemplo
 
-Copie o bloco de [`codex-statusline.toml`](codex-statusline.toml) para `%USERPROFILE%\.codex\config.toml` no Windows ou `~/.codex/config.toml` no macOS/Linux.
+```text
+GPT-6-Luna medium · 08 - statusline · main · Context 8% used · 258K window · weekly 98% left · Ask for approval
+```
 
-Se o arquivo já tiver uma seção `[tui]`, adicione ou substitua apenas `status_line` e `status_line_use_colors`; mantenha as demais opções.
+Os valores variam conforme a sessão, a conta e a versão do Codex. Indicadores sem dados disponíveis podem ser omitidos.
+
+## Instalação
+
+1. Abra `%USERPROFILE%\.codex\config.toml` no Windows ou `~/.codex/config.toml` no macOS/Linux.
+2. Copie o bloco de [`codex-statusline.toml`](codex-statusline.toml).
+3. Se já existir uma seção `[tui]`, mescle apenas as duas opções abaixo e preserve as demais configurações.
+4. Reinicie o Codex. No Codex CLI, também é possível abrir `/statusline` para selecionar e reordenar os indicadores.
 
 ```toml
 [tui]
@@ -26,32 +37,30 @@ status_line = [
 status_line_use_colors = true
 ```
 
-Reinicie o Codex para aplicar a configuração. No Codex CLI, também é possível abrir `/statusline` para selecionar e reordenar os indicadores disponíveis.
-
 ## Indicadores
 
-| Campo | O que mostra |
+| Indicador | Informação |
 | --- | --- |
 | `model-with-reasoning` | Modelo e nível de raciocínio atual. |
 | `project-name` | Nome do projeto detectado pelo Codex. |
-| `git-branch` | Branch atual quando a pasta pertence a um repositório Git. |
+| `git-branch` | Branch atual, quando a pasta está em um repositório Git. |
 | `context-used` | Percentual do contexto da conversa já utilizado. |
 | `context-window-size` | Tamanho total da janela de contexto, quando disponível. |
-| `weekly-limit` | Uso semanal restante, quando os dados da conta estão disponíveis. |
-| `approval-mode` | Modo atual de aprovação. |
+| `weekly-limit` | Uso semanal restante, quando disponível para a conta. |
+| `approval-mode` | Modo atual de aprovação de comandos. |
 
-O Codex também oferece `five-hour-limit`, que pode ser incluído na lista para mostrar o limite de 5 horas. Campos sem dados disponíveis podem ser omitidos pela interface.
+O Codex também oferece `five-hour-limit`; adicione esse item a `status_line` para mostrar o limite de 5 horas.
 
-## Limites da statusline nativa
+## O que a configuração não faz
 
-O Codex CLI escolhe entre indicadores predefinidos e os renderiza no rodapé. A configuração não aceita um script externo para desenhar barras, definir limiares de cores ou mostrar horários de reset. `status_line_use_colors` habilita as cores nativas do tema; não configura as cores por percentual.
+A statusline nativa do Codex aceita indicadores predefinidos e os renderiza no rodapé. Ela não executa um script de renderização personalizado. Portanto, este projeto mostra percentuais em texto, sem barras gráficas, cores definidas por faixas de uso ou horários de reset. `status_line_use_colors` ativa as cores nativas do tema, mas não configura limiares de cor.
 
-Assim, esta configuração mostra percentuais em texto, como `Context 8% used` e `weekly 98% left`. O formato e os detalhes visuais podem variar conforme a versão e o cliente Codex.
+O Codex também não fornece nesta linha nativa indicadores de cache de prompt ou de tokens que seriam regravados no cache.
 
 ## Compatibilidade
 
-Validado com Codex CLI `0.165.0-alpha.1.2` em Windows. Os nomes dos indicadores disponíveis podem mudar entre versões; use `/statusline` para conferir as opções na sua instalação.
+Validado com Codex CLI `0.165.0-alpha.1.2` em Windows. Os indicadores podem variar entre versões; use `/statusline` para conferir as opções da sua instalação.
 
 ## Licença
 
-Este projeto é disponibilizado sob a licença MIT. Consulte [`LICENSE`](LICENSE).
+MIT. Consulte [`LICENSE`](LICENSE).

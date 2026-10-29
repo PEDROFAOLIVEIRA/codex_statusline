@@ -1,5 +1,13 @@
 # Mescle este bloco com ~/.codex/config.toml.
 # Se [tui] já existir, substitua somente estes dois campos.
 [tui]
-status_line = ["model-with-reasoning", "project-name", "git-branch", "context-used", "context-window-size", "weekly-limit", "approval-mode"]
+status_line = [
+  "model-with-reasoning",
+  "project-name",
+  "git-branch",
+  "context-used",
+  "context-window-size",
+  "weekly-limit",
+  "approval-mode",
+]
 status_line_use_colors = true
