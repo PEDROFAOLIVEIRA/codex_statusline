@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="230" viewBox="0 0 1120 230" role="img" aria-labelledby="title desc">
+  <title id="title">Prévia da statusline nativa do Codex</title>
+  <desc id="desc">Uma janela de terminal escura mostrando modelo, projeto, branch, contexto, tamanho da janela, limite semanal e modo de aprovação.</desc>
+  <rect width="1120" height="230" rx="16" fill="#0b1020"/>
+  <rect x="1" y="1" width="1118" height="228" rx="15" fill="none" stroke="#283449"/>
+  <circle cx="28" cy="27" r="6" fill="#ff6b6b"/>
+  <circle cx="49" cy="27" r="6" fill="#ffd166"/>
+  <circle cx="70" cy="27" r="6" fill="#06d6a0"/>
+  <text x="560" y="32" text-anchor="middle" fill="#8290a8" font-family="Segoe UI, Arial, sans-serif" font-size="13">Codex CLI · statusline nativa</text>
+  <text x="28" y="78" fill="#8794aa" font-family="Consolas, 'Courier New', monospace" font-size="15">PS C:\projetos\statusline&gt; codex</text>
+  <rect x="20" y="111" width="1080" height="76" rx="10" fill="#151d2e" stroke="#2a3850"/>
+  <text x="40" y="140" fill="#7dd3fc" font-family="Consolas, 'Courier New', monospace" font-size="17" font-weight="700">GPT-6-Luna medium</text>
+  <text x="241" y="140" fill="#71809a" font-family="Consolas, 'Courier New', monospace" font-size="16">·</text>
+  <text x="262" y="140" fill="#e2e8f0" font-family="Consolas, 'Courier New', monospace" font-size="17">08 - statusline</text>
+  <text x="420" y="140" fill="#71809a" font-family="Consolas, 'Courier New', monospace" font-size="16">·</text>
+  <text x="441" y="140" fill="#86efac" font-family="Consolas, 'Courier New', monospace" font-size="17">main</text>
+  <text x="500" y="140" fill="#71809a" font-family="Consolas, 'Courier New', monospace" font-size="16">·</text>
+  <text x="521" y="140" fill="#e2e8f0" font-family="Consolas, 'Courier New', monospace" font-size="17">Context 8% used</text>
+  <text x="690" y="140" fill="#71809a" font-family="Consolas, 'Courier New', monospace" font-size="16">·</text>
+  <text x="711" y="140" fill="#e2e8f0" font-family="Consolas, 'Courier New', monospace" font-size="17">258K window</text>
+  <text x="842" y="140" fill="#71809a" font-family="Consolas, 'Courier New', monospace" font-size="16">·</text>
+  <text x="863" y="140" fill="#e2e8f0" font-family="Consolas, 'Courier New', monospace" font-size="17">weekly 98% left</text>
+  <text x="40" y="169" fill="#71809a" font-family="Consolas, 'Courier New', monospace" font-size="16">·</text>
+  <text x="61" y="169" fill="#cbd5e1" font-family="Consolas, 'Courier New', monospace" font-size="17">Ask for approval</text>
+  <text x="28" y="215" fill="#8290a8" font-family="Segoe UI, Arial, sans-serif" font-size="13">Prévia ilustrativa · os itens aparecem em texto e podem variar com a versão do Codex</text>
+</svg>
